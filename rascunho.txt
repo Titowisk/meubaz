@@ -1,0 +1,31 @@
+--Barra de Navegação--
+O que é?
+Categorias (Livros, Roupas, Jogos etc.)
+Contato
+--FimBarra--
+
+--O que é?--
+
+Meu Baz é um bazar virtual para re-venda de items usados. Podem ser livros, jogos, roupas,
+utensílios, o que quer que seja.
+
+Possui várias opções de pagamento, depósito, pagseguro, etc.
+
+--fimOque--
+
+--Categorias--
+
+Categorias criadas com base no que está sendo vendido
+
+-Livros
+-Jogos
+-Vestimentas e acessórios
+
+--FimCat--
+
+--Contato--
+
+Celular (WhatsApp): (71) 99956-5726
+email: rabelo49@hotmail.com
+
+--FimContato--
