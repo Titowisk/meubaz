@@ -1,0 +1,136 @@
+/*
+Domminant Color
+#ED801A
+*/
+
+body, html {
+    height: 100%;
+}
+
+h1 {
+    color: #ED801A;
+}
+
+header {
+    background-image: url('../img/comercio-local.jpg');
+    background-size: cover;
+    background-position: center;    
+    height: 70%;
+}
+
+/* button to top */
+#back-top {
+    position: fixed;
+    right: 10%;
+    bottom: 0px; 
+    z-index: 9999;
+}
+
+#back-top .btn {
+    background-color: #ED801A;
+    border-color: transparent;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Navbar*/
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-default .navbar-brand {
+    color: #ED801A;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ED801A;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #6D4C2D;
+}
+
+/*MeuBaz banner */
+.banner-welcome {
+    position: relative;
+    display: block;
+    width: 80%;
+    top: 30%;
+    left: 5%;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #ED801A;
+    color: #fff;
+    text-align: justify;
+    
+}
+
+.banner-welcome h1, .navbar-brand {
+    color: #fff;
+    font-family: 'Chelsea Market', cursive;    
+}
+/* Producst Section */
+
+
+
+/* newestProducts Section */
+
+
+/* Contact Section */
+
+
+.caixa {
+    margin-bottom: 0px;
+}
+
+footer {
+    margin-top: 20px;
+    color: #fff;
+}
+
+#footer-top {
+    background-color: #877445;
+    padding-bottom: 20px;
+}
+
+#footer-bottom {
+    background-color: #000;
+    padding-top: 10px;
+}
+
+#footer-bottom ul {
+    padding-left: 0px;
+}
+
+#footer-bottom li {
+    display: inline-block;
+    padding-right: 10px; 
+}
+
+#footer-bottom a {
+    color: #fff; 
+}
+
+
+@media (max-width: 320px) {
+    .banner-welcome {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    /*
+    .caixa {
+        position: relative;
+        display: block;
+        width: 425px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+    */
+    .banner-welcome {
+        width: 60%;
+    }
+    
+}

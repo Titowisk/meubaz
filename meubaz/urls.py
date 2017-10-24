@@ -16,6 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from core.views import HomeView
+
 urlpatterns = [
+    #url(r'^/produtos/$', ProductsView.as_view(), name='products'),
+    #url(r'^/contato/$', ContactView.as_view(), name='contact'),
+    url(r'^$', HomeView.as_view(), name="home"),
     url(r'^admin/', admin.site.urls),
 ]
+

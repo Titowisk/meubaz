@@ -1,0 +1,13 @@
+Não deu muito certo a minha ideia de manter o sitem em cascata. 
+parece que eu vou ter que fazer do estilo normal mesmo.
+
+*** Vou ter que repensar o projeto pra essa mudança -- OK
+
+*** Para larguras pequenas, ajustar quando o painel de navegação desloca o banner inicial do site. --OK
+
+*** atualizar arquivos html, css e js na pasta do projeto meubaz. --OK
+    base.html; OK
+    style.css; OK
+    welcome-banner.js OK
+
+*** Colocar Ícones de redes sociais
