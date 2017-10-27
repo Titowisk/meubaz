@@ -119,7 +119,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-    /*
+    
     .caixa {
         position: relative;
         display: block;
@@ -128,7 +128,7 @@ footer {
         transform: translateX(-50%);
         
     }
-    */
+
     .banner-welcome {
         width: 60%;
     }

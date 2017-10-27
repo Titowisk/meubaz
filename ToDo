@@ -10,4 +10,13 @@ parece que eu vou ter que fazer do estilo normal mesmo.
     style.css; OK
     welcome-banner.js OK
 
-*** Colocar Ícones de redes sociais
+*** Colocar Ícones de redes sociais --OK
+
+*** Tenho que resolver o problema de Categorias: a categoria livros tem que mostrar os livros, etc.
+
+*** Na parte do footer> newestProducts, quando o carousel muda, o título h2 do lado se mexe.
+
+*** core/test/test_views.py :
+    ** testar html principal --OK
+    ** testar status_code do response --OK
+    

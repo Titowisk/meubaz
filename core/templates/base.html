@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Meu Bazzar</title>
+    <title>{% block title %}Meu Bazzar{% endblock %}</title>
     <link href="{% static 'bootstrap3/css/bootstrap.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet">
@@ -27,7 +27,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">MB</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">MB</a>
                 </div>
             
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,12 +37,13 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
                         aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#books">Livros</a></li>
-                            <li><a href="#boardgames">BoardGames</a></li>
+                            <li><a href="{% url 'products' %}">Livros</a></li>
+                            <li><a href="{% url 'products' %}">BoardGames</a></li>
+                            <!-- Tenho Que ver isso aqui -->
                         </ul>
                         </li>
                         <li><a href="#newestProducts">Novidades</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="{% url 'contact' %}">Contato</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                             <li><a href="#">Cadastrar</a></li>
@@ -67,108 +68,8 @@
         </a>
     </aside>
 
-    
 
-    <section id="products">
-        <div class="container">
-            <h1>Produtos</h1>
-            <ol id="books" class="breadcrumb">
-                <li><a href="#">Produtos</a></li>
-                <li class="active">Livros</li>
-            </ol>
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://dummyimage.com/600x400/000/fff" alt="...">
-                        <div class="caption">
-                            <h3>Thumbnail label</h3>
-                            <p>...</p>
-                            <p>
-                                <a href="#" class="btn btn-primary" role="button">Button</a> 
-                                <a href="#" class="btn btn-default" role="button">Button</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://dummyimage.com/600x400/000/fff" alt="...">
-                        <div class="caption">
-                            <h3>Thumbnail label</h3>
-                            <p>...</p>
-                            <p>
-                                <a href="#" class="btn btn-primary" role="button">Button</a> 
-                                <a href="#" class="btn btn-default" role="button">Button</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://dummyimage.com/600x400/000/fff" alt="...">
-                        <div class="caption">
-                            <h3>Thumbnail label</h3>
-                            <p>...</p>
-                            <p>
-                                <a href="#" class="btn btn-primary" role="button">Button</a> 
-                                <a href="#" class="btn btn-default" role="button">Button</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        
-            </div>
-            <ol id="boardgames" class="breadcrumb">
-                <li><a href="#">Produtos</a></li>
-                <li class="active">BoardGames</li>
-            </ol>
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://dummyimage.com/600x400/000/fff" alt="...">
-                        <div class="caption">
-                            <h3>Thumbnail label</h3>
-                            <p>...</p>
-                            <p>
-                                <a href="#" class="btn btn-primary" role="button">Button</a> 
-                                <a href="#" class="btn btn-default" role="button">Button</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://dummyimage.com/600x400/000/fff" alt="...">
-                        <div class="caption">
-                            <h3>Thumbnail label</h3>
-                            <p>...</p>
-                            <p>
-                                <a href="#" class="btn btn-primary" role="button">Button</a> 
-                                <a href="#" class="btn btn-default" role="button">Button</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <img src="https://dummyimage.com/600x400/000/fff" alt="...">
-                        <div class="caption">
-                            <h3>Thumbnail label</h3>
-                            <p>...</p>
-                            <p>
-                                <a href="#" class="btn btn-primary" role="button">Button</a> 
-                                <a href="#" class="btn btn-default" role="button">Button</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% block content %}{% endblock %}    
 
     <footer>
         <div id="footer-top">
