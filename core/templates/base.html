@@ -37,8 +37,9 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
                         aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{% url 'products' %}">Livros</a></li>
-                            <li><a href="{% url 'products' %}">BoardGames</a></li>
+                            {% for category in categories %}
+                            <li><a href="{% url 'catalog:products' %}">{{ category }}</a></li>
+                            {% endfor %}                            
                             <!-- Tenho Que ver isso aqui -->
                         </ul>
                         </li>

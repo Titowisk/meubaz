@@ -7,13 +7,11 @@ class HomeView(TemplateView):
     """Alguma coisa"""
 
     template_name = "highLight_products.html"
-
-class ProductsView(TemplateView):
-
-    template_name = "products_section.html"
-
+    
 class ContactView(TemplateView):
 
     template_name = "contact_section.html"
 
 
+home = HomeView.as_view()
+contact = ContactView.as_view()

@@ -25,7 +25,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = '8l@j*3--$plys^%b!=c!%&2(5x2v6wdblp9#ithz6jollrsyti'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'core',
+    'catalog',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #apps
+    'catalog.context_processors.categories',
 ]
 
 ROOT_URLCONF = 'meubaz.urls'
@@ -135,3 +138,8 @@ ALLOWED_HOSTS = ['*']
 
 # Static Files (CSS, JS, IMGS)
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
