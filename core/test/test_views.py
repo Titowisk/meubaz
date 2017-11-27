@@ -3,14 +3,20 @@
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
 
+from model_mommy import mommy
+
+from catalog.models import Category, Products
+
 class HomeViewTestCase(TestCase):
 
     def setUp(self):
         self.client = Client()
         self.url = reverse('home')
+        self.products = mommy.make('catalog.Products', _quantity=10)
+        
 
     def tearDown(self):
-        pass
+        Products.objects.all().delete()
 
     def test_status_code(self):
         # should be 200
@@ -20,6 +26,16 @@ class HomeViewTestCase(TestCase):
     def test_template_used(self):
         response = self.client.get(self.url)
         self.assertTemplateUsed(response, 'highLight_products.html')
+
+    def test_product_list(self):
+        response = self.client.get(self.url)
+        self.assertTrue('products' in response.context)
+        products = response.context['products']
+        self.assertEquals(products.count(), 10)
+        
+
+
+
 
 
 

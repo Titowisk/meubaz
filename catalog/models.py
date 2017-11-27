@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Category(models.Model):
@@ -21,6 +22,10 @@ class Category(models.Model):
     # Representar o objeto como string para melhorar sua visualização no ADMIN
     def __str__(self):
         return self.name
+    
+    # O próprio modelo sabe qual é a sua url de acesso.
+    def get_absolute_url(self):
+        return reverse('catalog:products', kwargs={'slug': self.slug})
 
 
 class Products(models.Model):
@@ -51,3 +56,11 @@ class Products(models.Model):
     # Representar o objeto como string para melhorar sua visualização no ADMIN
     def __str__(self):
         return self.name
+    
+    def product_detail_url(self):
+        return reverse('catalog:product_detail', kwargs={'slug': self.slug})
+    """
+    def lowest_prices(self):
+        low_price_list = Products.objects.order_by('price')
+        return low_price_list
+    """

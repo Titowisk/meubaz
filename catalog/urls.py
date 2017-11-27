@@ -1,6 +1,9 @@
 from django.conf.urls import url
-from .views import ProductsView
+from . import views
 
 urlpatterns = [
-    url(r'^produtos/$', ProductsView.as_view(), name='products'),
+    url(r'^(?P<slug>[\w_-]+)/$', views.product, name='products'),
+    url(r'^detalhes/(?P<slug>[\w_-]+)/$', views.product_detail, name='product_detail'),
 ]
+
+# próximo desafio detalhes/(?P<slug>[\w_-]+)

@@ -70,7 +70,9 @@ header {
     font-family: 'Chelsea Market', cursive;    
 }
 /* Producst Section */
-
+.priceTag {
+    text-align-last: center;
+}
 
 
 /* newestProducts Section */

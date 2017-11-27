@@ -12,11 +12,15 @@ parece que eu vou ter que fazer do estilo normal mesmo.
 
 *** Colocar Ícones de redes sociais --OK
 
-*** Tenho que resolver o problema de Categorias: a categoria livros tem que mostrar os livros, etc.
-
 *** Na parte do footer> newestProducts, quando o carousel muda, o título h2 do lado se mexe.
 
 *** core/test/test_views.py :
     ** testar html principal --OK
     ** testar status_code do response --OK
     
+*** Tenho que resolver o problema de Categorias: a categoria livros tem que mostrar os livros, etc.
+    highLight_products.html -- OK
+
+*** products_section filtrar os produtos por categoria. --OK
+
+*** Melhorar a exibição individual dos detalhes de um produto.
