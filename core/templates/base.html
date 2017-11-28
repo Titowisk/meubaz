@@ -27,7 +27,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{% url 'home' %}">MB</a>
+                    <a class="navbar-brand" href="{% url 'index' %}">MB</a>
                 </div>
             
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,24 +42,18 @@
                             {% endfor %}                            
                         </ul>
                         </li>
+                        <li><a href="{% url 'catalog:highLight' %}">Destaques</a></li>
                         <li><a href="#newestProducts">Novidades</a></li>
                         <li><a href="{% url 'contact' %}">Contato</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Cadastrar</a></li>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Carrinho</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
             
-        <div class="banner-welcome">
-            <h1>MeuBaz</h1>
-            <p>
-                Um bazar virtual para re-venda de items usados. 
-                Podem ser livros, jogos, roupas, utensílios, o que quer que seja.
-            </p>
-        </div>
+        
     </header>
 
     <aside id="back-top">
@@ -87,27 +81,26 @@
                             
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <img  class="img-responsive" src="https://dummyimage.com/16:9x1080" alt="...">
-                                    <div class="carousel-caption">
-                                        <h3>Produto</h3>
-                                        <p>preço R$</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img  class="img-responsive" src="https://dummyimage.com/16:9x1080" alt="...">
-                                    <div class="carousel-caption">
-                                        <h3>Produto</h3>
-                                        <p>preço R$</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img  class="img-responsive" src="https://dummyimage.com/16:9x1080" alt="...">
-                                    <div class="carousel-caption">
-                                        <h3>Produto</h3>
-                                        <p>preço R$</p>
-                                    </div>
-                                </div>
+                                {% for p in latest_products  %}
+                                    {% if forloop.first %}
+                                        <div class="item active">
+                                            <img  class="img-responsive" src="https://dummyimage.com/16:9x1080" alt="...">
+                                            <div class="carousel-caption">
+                                                <h3>{{p}}</h3>
+                                                <p>R$ {{p.price}}</p>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="item">
+                                            <img  class="img-responsive" src="https://dummyimage.com/16:9x1080" alt="...">
+                                            <div class="carousel-caption">
+                                                <h3>{{p}}</h3>
+                                                <p>R$ {{p.price}}</p>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                
                             </div>
                             
                             <!-- Controls -->

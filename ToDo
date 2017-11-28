@@ -12,8 +12,6 @@ parece que eu vou ter que fazer do estilo normal mesmo.
 
 *** Colocar Ícones de redes sociais --OK
 
-*** Na parte do footer> newestProducts, quando o carousel muda, o título h2 do lado se mexe.
-
 *** core/test/test_views.py :
     ** testar html principal --OK
     ** testar status_code do response --OK
@@ -22,5 +20,7 @@ parece que eu vou ter que fazer do estilo normal mesmo.
     highLight_products.html -- OK
 
 *** products_section filtrar os produtos por categoria. --OK
+
+*** Na parte do footer> newestProducts, quando o carousel muda, o título h2 do lado se mexe. -- OK
 
 *** Melhorar a exibição individual dos detalhes de um produto.

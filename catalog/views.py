@@ -4,6 +4,18 @@ from django.views.generic import ListView, DetailView
 
 from .models import Category, Products
 
+class HighLightView(ListView):
+    # Only show the lowest price products
+    template_name = "catalog/highLight_products.html"
+    model = Products
+    context_object_name = 'six_lowest_price'
+
+    def get_queryset(self):
+        lowest_price_products = Products.objects.order_by('price')[:6] # retorna os 6 primeiros produtos ordenados pelo preço, de forma crescente
+        return lowest_price_products
+   
+
+highLight = HighLightView.as_view()
 
 class ProductsView(ListView):
 

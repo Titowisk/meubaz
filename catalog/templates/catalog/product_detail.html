@@ -14,12 +14,24 @@
                 </div>
             </div>
             <div class="col-sm-6 col-md-6">
-                <h2>Preço:</h2>
-                <p>R${{product_detail.price}}</p>
-                <h2>Quantidade Disponível:</h2>
-                <p>{{product_detail.quantity}}</p>
-                <h2>Descrição:</h2>
-                <p>{{product_detail.description|linebreaks}}</p>
+                <table class="table">
+                    <tr>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                    </tr>
+                    <tr>
+                        <td>R${{product_detail.price}}</td>
+                        <td>{{product_detail.quantity}}</td>
+                    </tr>
+                </table>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Descrição</th>
+                    </tr>
+                    <tr>
+                        <td>{{product_detail.description|linebreaks}}</td>
+                    </tr>
+                </table>
             </div>
 
         </div>

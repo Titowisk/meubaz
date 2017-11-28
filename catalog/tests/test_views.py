@@ -12,6 +12,7 @@ class ProductsSectionTestCase(TestCase):
         self.products = mommy.make('catalog.Products', _quantity=10)
         for p in self.products:
             p.category = self.category
+            p.save()
         self.url = reverse('catalog:products', kwargs={'slug': self.category.slug})
         self.client = Client()
         
@@ -32,6 +33,6 @@ class ProductsSectionTestCase(TestCase):
         self.assertEquals(category_list.count(), 10)
 
 
-
-
-# próximo desafio: testar views que recebem parâmetros nomeados em suas urls.
+class ProductDetailTestCase(TestCase):
+    # Fazer quando finalizar o frontend da view
+    pass

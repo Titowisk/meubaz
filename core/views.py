@@ -5,19 +5,16 @@ from django.views.generic import TemplateView, ListView
 
 from catalog.models import Products
 
-class HomeView(ListView):
+class IndexView(TemplateView):
 
-    template_name = "highLight_products.html"
-    model = Products
-    context_object_name = 'products'
+    template_name = "index.html"
 
     
 class ContactView(TemplateView):
 
     template_name = "contact_section.html"
 
-
-home = HomeView.as_view()
+index = IndexView.as_view()
 contact = ContactView.as_view()
 
 """

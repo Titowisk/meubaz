@@ -11,12 +11,6 @@ h1 {
     color: #ED801A;
 }
 
-header {
-    background-image: url('../img/comercio-local.jpg');
-    background-size: cover;
-    background-position: center;    
-    height: 70%;
-}
 
 /* button to top */
 #back-top {
@@ -36,6 +30,7 @@ header {
 /* Navbar*/
 .navbar {
     border-radius: 0;
+    margin-bottom: 0;
 }
 
 .navbar-default .navbar-brand {
@@ -48,6 +43,13 @@ header {
 
 .navbar-default .navbar-nav>li>a:hover {
     color: #6D4C2D;
+}
+
+#welcome {
+    background-image: url('../img/comercio-local.jpg');
+    background-size: cover;
+    background-position: center;    
+    height: 70%;
 }
 
 /*MeuBaz banner */
@@ -86,7 +88,6 @@ header {
 }
 
 footer {
-    margin-top: 20px;
     color: #fff;
 }
 
