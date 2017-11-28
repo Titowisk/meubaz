@@ -1,1 +1,1 @@
-web: gunicorn djangoecommerce.wsgi --log-file -
+web: gunicorn meubaz.wsgi --log-file -
