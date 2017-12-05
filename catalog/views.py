@@ -11,7 +11,8 @@ class HighLightView(ListView):
     context_object_name = 'six_lowest_price'
 
     def get_queryset(self):
-        lowest_price_products = Products.objects.order_by('price')[:6] # retorna os 6 primeiros produtos ordenados pelo preço, de forma crescente
+        lowest_price_products = Products.objects.order_by('price')[:6] 
+        # retorna os 6 primeiros produtos ordenados pelo preço, de forma crescente
         return lowest_price_products
    
 
@@ -21,7 +22,8 @@ class ProductsView(ListView):
 
     template_name = "catalog/products_section.html"
     context_object_name = 'category_list'
-
+    paginate_by = 3
+    
     def get_queryset(self):
         # self.request acessa a requisição atual
         # self.args acessa os parâmetros não-nomeados da view
